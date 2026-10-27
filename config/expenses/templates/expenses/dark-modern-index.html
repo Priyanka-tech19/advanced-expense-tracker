@@ -128,6 +128,7 @@
                       {{ expense_form.category.errors }}
                   </div>
                 {% endif %}
+              </div>
             </div>
             <div class="space-y-1">
               <label for="date" class="text-sm text-slate-400">
@@ -234,7 +235,7 @@
                 <th class="px-6 py-3">Date</th>
                 <th class="px-6 py-3">Name</th>
                 <th class="px-6 py-3">Category</th>
-                <th class="px-6 py-3">Amount ($)</th>
+                <th class="px-6 py-3">Amount (₹)</th>
                 <th class="px-6 py-3">Modify</th>
                 <th class="px-6 py-3">Delete</th>
               </tr>
@@ -474,7 +475,7 @@
             legend: { display: false },
             tooltip: {
               callbacks: {
-                label: (ctx) => `$${ctx.parsed.y.toLocaleString()}`,
+                label: (ctx) => `₹${ctx.parsed.y.toLocaleString()}`,
               },
             },
           },
